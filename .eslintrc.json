@@ -1,0 +1,20 @@
+{
+  "root": true,
+  "parserOptions": { "project": "tsconfig.eslint.json" },
+  "plugins": ["simple-import-sort"],
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "plugin:react/jsx-runtime",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    // This config needs to be the last one as it overrides rules from other configs.
+    "prettier"
+  ],
+  "rules": {
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": ["vite.config.ts"] }],
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error"
+  }
+}
